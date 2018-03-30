@@ -538,7 +538,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 2.5f, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -686,9 +686,9 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 42  // X offset: -left  +right  [of the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 0 //42  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0   // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.8 // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0 //0.8 // Z offset: -below +above  [the nozzle]
 // Z offset -> M851 Z-0.8
 
 // X and Y axis travel speed (mm/m) between probes
@@ -918,10 +918,10 @@
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 38
-  #define RIGHT_PROBE_BED_POSITION 130
-  #define FRONT_PROBE_BED_POSITION 40
-  #define BACK_PROBE_BED_POSITION 170
+  #define LEFT_PROBE_BED_POSITION  10  //38
+  #define RIGHT_PROBE_BED_POSITION 170 //130
+  #define FRONT_PROBE_BED_POSITION 10  //40
+  #define BACK_PROBE_BED_POSITION  170 //170
 
   // The Z probe minimum outer margin (to validate G29 parameters).
   #define MIN_PROBE_EDGE 10
@@ -1043,8 +1043,8 @@
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (2.5*60)
+#define HOMING_FEEDRATE_XY (50 * 60)
+#define HOMING_FEEDRATE_Z  (5 * 60) //(2.5*60)
 
 // @section calibrate
 
