@@ -294,8 +294,11 @@
   #endif
 #endif
 
-//#define Z_DUAL_STEPPER_DRIVERS
+#define Z_DUAL_STEPPER_DRIVERS
 #if ENABLED(Z_DUAL_STEPPER_DRIVERS)
+  #define Z2_STEP_PIN   E1_STEP_PIN // Stepper to be used to Z2 axis.
+  #define Z2_DIR_PIN    E1_DIR_PIN
+  #define Z2_ENABLE_PIN E1_ENABLE_PIN
   //#define Z_DUAL_ENDSTOPS
   #if ENABLED(Z_DUAL_ENDSTOPS)
     #define Z2_USE_ENDSTOP _XMAX_
